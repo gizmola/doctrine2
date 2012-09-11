@@ -116,6 +116,16 @@ class ClassMetadataInfo implements ClassMetadata
      */
     const GENERATOR_TYPE_CUSTOM = 7;
     /**
+     *
+     * Qubeey QID
+     */
+    const GENERATOR_TYPE_QID = 20;
+    /**
+     *
+     * Qubeey Qquid
+     */
+    const GENERATOR_TYPE_QGUID = 21;
+    /**
      * DEFERRED_IMPLICIT means that changes of entities are calculated at commit-time
      * by doing a property-by-property comparison with the original data. This will
      * be done for all entities that are in MANAGED state at commit-time.

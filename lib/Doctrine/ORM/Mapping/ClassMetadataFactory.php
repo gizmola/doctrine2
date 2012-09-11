@@ -487,6 +487,13 @@ class ClassMetadataFactory extends AbstractClassMetadataFactory
                 }
                 $class->setIdGenerator(new $definition['class']);
                 break;
+                
+            case ClassMetadata::GENERATOR_TYPE_QID:
+                $class->setIdGenerator(new \Doctrine\ORM\Id\QidGenerator());
+                break;
+            case ClassMetadata::GENERATOR_TYPE_QGUID:
+                $class->setIdGenerator(new \Doctrine\ORM\Id\QguidGenerator());
+                break;
 
             default:
                 throw new ORMException("Unknown generator type: " . $class->generatorType);
